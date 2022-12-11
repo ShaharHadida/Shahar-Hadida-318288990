@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NevigationPage</title>
+    <link rel="stylesheet" href="../statics/Style.css">
+    <script defer src="../statics/page1.js"></script>
+</head>
+<body class="NavPage">
+    <header>
+        <img src="../statics/line.png" alt=""
+            width="150" height="5">
+        <div class="logo2">
+            <div id="pic2">
+                <img src="../statics/backround.png" alt=""
+                    width="20" height="20">
+            </div>
+            <h4>FIND ME A CLASS</h4>
+        </div>
+        <div id="line22">
+            <img src="../statics/line.png" alt=""
+                width="150" height="5">
+        </div>
+    </header>
+    <nav id="navNevi">
+        <ul>
+            <li><a href="../views/WelcomePage.html">מסך בית</a></li>
+            <li><a href="../views/SearchPage.html">חיפוש כיתה</a></li>
+            <li><a href="../views/AromaOrder.html">הזמן מארומה</a></li>
+            <li><a href="../views/NevigationPage.html">נווט לבניין</a></li>
+            <li><a href="../views/Map.html">מפת מיקרוגלים</a></li>
+        </ul>
+    </nav>
+
+    <content id="contNevi">
+        <form class="my_form" action="" method="GET">
+            <div class="msg" id="msgSerch"></div>
+            <select name="buildingSelect" id="buildingSelect">
+                <option disabled selected value> </option>
+                <option value="90">90</option>
+                <option value="91">91</option>
+                <option value="92">92</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="28">28</option>
+            </select>
+            : מספר בניין
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" class="btn" id="NevBtn" value="נווט">
+        </form>
+    </content>
+
+</body>
+</html>

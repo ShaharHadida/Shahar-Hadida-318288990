@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SerchPage</title>
+    <link rel="stylesheet" href="../statics/Style.css">
+    <script defer src="../statics/page1.js"></script>
+</head>
+
+<body class="SearchPage">
+    <header>
+        <img src="../statics/line.png" alt=""
+            width="150" height="5">
+        <div class="logo2">
+            <div id="pic2">
+                <img src="../statics/backround.png" alt=""
+                    width="20" height="20">
+            </div>
+            <h4>FIND ME A CLASS</h4>
+        </div>
+        <div id="line22">
+            <img src="../statics/line.png" alt=""
+                width="150" height="5">
+        </div>
+    </header>
+
+    <nav id="navSearch">
+        <ul>
+            <li><a href="../views/WelcomePage.html">מסך בית</a></li>
+            <li><a href="../views/SearchPage.html">חיפוש כיתה</a></li>
+            <li><a href="../views/AromaOrder.html">הזמן מארומה</a></li>
+            <li><a href="../views/NevigationPage.html">נווט לבניין</a></li>
+            <li><a href="../views/Map.html">מפת מיקרוגלים</a></li>
+        </ul>
+    </nav>
+
+    <div class="content" id="WelcomePage">
+        <h1>חיפוש כיתה</h1>
+        <form class="my_form" id="serch" action="" method="GET">
+            <div class="msg" id="msgSerch"></div>
+            <br>
+            <div class="filds">
+            <input type="text" name="building" id="building">
+            :מספר בניין
+            <br>
+            <br>
+            <input type="text" name="date" id="date">
+            :תאריך
+            <br>
+            <br>
+            <input type="text" name="start" id="start">
+            :משעה
+            <br>
+            <br>
+            <input type="text" name="end" id="end">
+            :עד שעה
+            <br>
+            <br>
+            </div>
+            <div id="box">
+                <label>הצג כיתות בבניינים קרובים</label>
+                <input type="checkbox">
+            </div>
+        <input type="submit" class="btn" id="serchBtn" value="מצא לי כיתה">
+        </form>
+    </div>
+</body>
+</html>
