@@ -447,12 +447,28 @@ h4{
     color: white;
 }
 .btn{
+    display: inline-flex;
     flex-direction: row;
     color: darkgoldenrod;
     font-weight: bold;
     border: 3px solid #F7D29B;
     border-radius: 5px;
     background-color: #F9E3C3;
+    transition-property: background-color;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#date{
+    padding: 1% 8.5%;
+}
+
+#start{
+    padding: 1% 11%;
+}
+
+#end{
+    padding: 1% 11%;
 }
 
 .btn:hover{
