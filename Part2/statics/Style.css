@@ -7,9 +7,11 @@
     display: grid;
     grid-template-areas:
     'header sidebar'
-    'content sidbar';
+    'content sidbar'
+    'footer footer';
     grid-template-columns:54% 46%;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 10% 60% 3%;
+
 }
 
 .my_form#opening {
@@ -60,15 +62,41 @@ h3{
     margin-right: 55%;
 }
 
+#openBtn1{
+    padding: 3% 4%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#openBtn2{
+
+    padding: 3% 4%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#openBtn3{
+    padding: 3% 4.5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#openBtn4{
+    padding: 3% 1%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /*Map*/
 .MapPage{
     display: grid;
     grid-template-areas:
     'header'
     'nav'
-    'content';
+    'content'
+    'footer';
     grid-template-columns:100%;
-    grid-template-rows: 5% 5% 90%;
+    grid-template-rows: 5% 5% 85% 5%;
 }
 
 nav#navClass{
@@ -92,9 +120,10 @@ nav#navClass{
     grid-template-areas:
     'header'
     'nav'
-    'content';
+    'content'
+    'footer';
     grid-template-columns:100%;
-    grid-template-rows: 17% 10% 73%;
+    grid-template-rows: 20% 10% 90% 5%;
     background: url("../statics/backroundopacity.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -139,9 +168,10 @@ select{
     grid-template-areas:
     'header'
     'nav'
-    'content';
+    'content'
+    'footer';
     grid-template-columns:100%;
-    grid-template-rows: 10% 7% 83%;
+    grid-template-rows: 10% 7% 80% 3%;
     background: url("../statics/backroundopacity.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,9 +219,10 @@ form{
     grid-template-areas:
     'header'
     'nav'
-    'content';
+    'content'
+    'footer';
     grid-template-columns:100%;
-    grid-template-rows: 15% 10% 75%;
+    grid-template-rows: 15% 10% 110% 5%;
     background: url("../statics/backroundopacity.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -247,191 +278,15 @@ form{
     grid-template-areas:
     'header'
     'nav'
-    'content';
+    'content'
+    'footer';
     grid-template-columns:100%;
-    grid-template-rows: 5% 5% 90%;
+    grid-template-rows: 8% 5% 86% 3%;
     background: url("../statics/backroundopacity.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*details page*/
-.DetailsPage{
-    display: grid;
-    grid-template-areas:
-    'header'
-    'nav'
-    'content';
-    grid-template-columns:100%;
-    grid-template-rows: 25% 10% 65%;
-    background: url("../statics/backroundopacity.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#order{
-    padding: 1% 2%;
-}
-/*all pages*/
-.AllPages{
-    display: grid;
-    grid-template-areas:
-    'header'
-    'nav'
-    'content';
-    grid-template-columns:100%;
-    grid-template-rows: 5% 5% 90%;
-    background: url("../statics/backroundopacity.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#WelcomePage{
-    text-align: center;
-}
-
-h4{
-    color: darkgoldenrod;
-    font-size: 20px;
-    font-family: "Segoe UI";
-}
-
-.header{
-    grid-area: header;
-}
-
-.content {
-    grid-area: content;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    text-align: left;
-}
-
-
-
-.error {
-    text-align: center;
-    border-radius: 5px;
-    background-color: #F7D29B;
-    color: darkgoldenrod;
-    font-size: 80%;
-    font-family:"Freestyle Script" ;
-
-}
-.bg-dark {
-    background-color: #333333;
-    color: white;
-}
-.btn{
-    flex-direction: row;
-    color: darkgoldenrod;
-    font-weight: bold;
-    border: 3px solid #F7D29B;
-    border-radius: 5px;
-    background-color: #F9E3C3;
-}
-
-.btn:hover{
-    color: black;
-    background-color: antiquewhite;
-}
-
-input{
-    flex-direction: row;
-    color: #544408;
-    font-weight: bold;
-    border: 3px solid #F7D29B;
-    border-radius: 5px;
-    background-color: #F9E3C3;
-    padding: 1% 5%;
-    margin: 5px;
-}
-
-
-.logo2{
-    display: flex;
-}
-
-#line22{
-    margin-left: 8%;
-}
-
-#pic2{
-    margin-top: 0.5%;
-}
-
-li {
-    list-style-type: none;
-    display: inline;
-    margin: 5%;
-}
-
-#openBtn1{
-    padding: 3% 4%;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#openBtn2{
-
-    padding: 3% 4%;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#openBtn3{
-    padding: 3% 4.5%;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#openBtn4{
-    padding: 3% 1%;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-a {
-    color: darkgoldenrod;
-    text-decoration: none;
-}
-
-.active {
-    color: #544408;
-    font-weight: bold;
-    font-size: 130% ;
-
-}
-
-
-.arrival-heading strong{
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: #1b1919;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 40px;
-    padding: 5px 30px;
-    border: 1px solid #e0e0e0;
-}
-.arrival-heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.arrival-heading strong{
-    color: #ffffff;
-    background-color: #202020;
-    font-weight: 500;
-}
-.arrival-heading p{
-    color: #808080;
-    margin: 10px;
-    font-size: 0.9rem;
-}
 .product-container{
     width:90%;
     display: flex;
@@ -482,6 +337,26 @@ a {
 .product-box:hover{
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
 }
+
+/*details page*/
+.DetailsPage{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'nav'
+    'content'
+    'footer';
+    grid-template-columns:100%;
+    grid-template-rows: 25% 10% 90% 7%;
+    background: url("../statics/backroundopacity.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#order{
+    padding: 1% 2%;
+}
+
 .add-cart{
     position: absolute;
     right: -20px;
@@ -505,4 +380,150 @@ a {
 }
 .product-box:hover .add-cart{
     display: flex;
+}
+
+/*all pages*/
+.AllPages{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'content'
+    'footer';
+    grid-template-columns:100%;
+    grid-template-rows: 5% 120% 5%;
+    background: url("../statics/backroundopacity.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#WelcomePage{
+    text-align: center;
+}
+
+h4{
+    color: darkgoldenrod;
+    font-size: 20px;
+    font-family: "Segoe UI";
+}
+
+.header{
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    text-align: left;
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 120%;
+    border: 3px solid #F7D29B;
+    border-radius: 5px;
+    background-color: #F9E3C3;
+    color: darkgoldenrod;
+    display: grid;
+
+}
+
+.error {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #F7D29B;
+    color: darkgoldenrod;
+    font-size: 80%;
+    font-family:"Freestyle Script" ;
+
+}
+.bg-dark {
+    background-color: #333333;
+    color: white;
+}
+.btn{
+    flex-direction: row;
+    color: darkgoldenrod;
+    font-weight: bold;
+    border: 3px solid #F7D29B;
+    border-radius: 5px;
+    background-color: #F9E3C3;
+}
+
+.btn:hover{
+    color: black;
+    background-color: antiquewhite;
+}
+
+input{
+    flex-direction: row;
+    color: #544408;
+    font-weight: bold;
+    border: 3px solid #F7D29B;
+    border-radius: 5px;
+    background-color: #F9E3C3;
+    padding: 1% 5%;
+    margin: 5px;
+}
+
+.logo2{
+    display: flex;
+}
+
+#line22{
+    margin-left: 8%;
+}
+
+#pic2{
+    margin-top: 0.5%;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    margin: 5%;
+}
+
+a {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+.active {
+    color: #544408;
+    font-weight: bold;
+    font-size: 130% ;
+
+}
+
+.arrival-heading strong{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #1b1919;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 40px;
+    padding: 5px 30px;
+    border: 1px solid #e0e0e0;
+}
+.arrival-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.arrival-heading strong{
+    color: #ffffff;
+    background-color: #202020;
+    font-weight: 500;
+}
+.arrival-heading p{
+    color: #808080;
+    margin: 10px;
+    font-size: 0.9rem;
 }
