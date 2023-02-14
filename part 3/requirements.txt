@@ -7,23 +7,24 @@ mysql2
 csvtojson 
 csv-stringify
  csv-parse
+cookie-parser
 
-טבלת Students:
+Table Students:
 http://localhost:3000/CreateStudents
 http://localhost:3000/InsertDataStudents
 http://localhost:3000/ShowStudents
 http://localhost:3000/DropStudents
-טבלת Classes: 
+Table Classes: 
 http://localhost:3000/CreateClasses
 http://localhost:3000/InsertDataClasses
 http://localhost:3000/ShowClasses
 http://localhost:3000/DropClasses
-טבלת Building:
+Table Building:
 http://localhost:3000/CreateBuilding
 http://localhost:3000/InsertDataBuilding
 http://localhost:3000/ShowBuilding
 http://localhost:3000/DropBuilding
-מחיקת כל הטבלאות:
+Delete all tables:
 http://localhost:3000/DropTables
 
 
