@@ -146,7 +146,7 @@ app.get('/AboutPage', (req, res)=>{
 });
 
 app.all('/SingUpPage', (req, res)=>{
-    res.render('SingUpPage')
+    res.render('SingUpPage',{v2: ''} )
 });
 
 app.post('/NewStudent',CRUD.NewStudent)

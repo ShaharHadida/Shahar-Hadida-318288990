@@ -15,6 +15,7 @@ const endInput = document.querySelector('#end');
 const boxInput = document.querySelector('#box');
 const buildingSelect = document.getElementById('buildingSelect');
 var currentPage = window.location.pathname;
+const MSGSERVER = document.getElementById('#MSGSERVER');
 
 const activePage = document.querySelectorAll('nav a').forEach(
     link =>{
@@ -28,6 +29,31 @@ const activePage = document.querySelectorAll('nav a').forEach(
 console.log();
 
 if (currentPage.includes('OpeningPage')) {
+    const onSubmitOpeningPage = (e) => {
+        if (emailOpenInput.value === '' || passwordOpenInput.value === '') {
+            console.log('error')
+            msg.innerHTML = 'יש למלא את כל השדות'
+            msg.classList.add('error')
+            e.preventDefault()
+        } else {
+            if (emailOpenInput.value.includes('@post.bgu.ac.il')){
+                console.log('success')
+                msg.innerHTML = ''
+                msg.classList.remove('error')
+                window.location.href = "http://localhost:3000/WelcomePage";
+            } else{
+                console.log('error')
+                msg.innerHTML = 'המייל שהוכנס הוא לא מייל אוניברסיטאי'
+                msg.classList.add('error')
+                e.preventDefault()
+            }
+
+        }
+    }
+    myForm.addEventListener('submit', onSubmitOpeningPage)
+}
+
+if (currentPage.includes('FindStudent')) {
     const onSubmitOpeningPage = (e) => {
         if (emailOpenInput.value === '' || passwordOpenInput.value === '') {
             console.log('error')
@@ -107,6 +133,39 @@ if (currentPage.includes('SingUpPage')) {
             if (emailsingInput.value.includes('@post.bgu.ac.il')){
                 if(passwordsingInput.value!=password2Input.value){
                     console.log('error')
+                    msg.innerHTML = 'הסיסמאות שהוזנו לא זהות'
+                    msg.classList.add('error') 
+                    e.preventDefault()
+                } else {
+                    console.log('success')
+                    msg.innerHTML = ''
+                    msg.classList.remove('error')
+                    window.location.href = "http://localhost:3000/OpeningPage";
+                }
+            } else{
+                console.log('error')
+                msg.innerHTML = 'המייל שהוכנס הוא לא מייל אוניברסיטאי'
+                msg.classList.add('error')
+                e.preventDefault()
+            }
+
+        }
+    }
+    myForm.addEventListener('submit', onSubmitSingUpPage)
+}
+
+if (currentPage.includes('NewStudent')) {
+    const onSubmitSingUpPage = (e) => {
+        if (firstnameInput.value === '' ||lastnameInput.value === '' ||emailsingInput.value === '' || passwordsingInput.value === ''|| password2Input.value === '') {
+            console.log('error')
+            msg.innerHTML = 'יש למלא את כל השדות'
+            msg.classList.add('error')
+            e.preventDefault()
+        } else {
+            if (emailsingInput.value.includes('@post.bgu.ac.il')){
+                if(passwordsingInput.value!=password2Input.value){
+                    console.log('error')
+                    MSGSERVER.innerHTML = ''
                     msg.innerHTML = 'הסיסמאות שהוזנו לא זהות'
                     msg.classList.add('error') 
                     e.preventDefault()
