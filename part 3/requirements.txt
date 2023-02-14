@@ -1,0 +1,69 @@
+Modulse:
+Express
+Path
+body-parser
+pug
+mysql2
+csvtojson 
+csv-stringify
+ csv-parse
+
+טבלת Students:
+http://localhost:3000/CreateStudents
+http://localhost:3000/InsertDataStudents
+http://localhost:3000/ShowStudents
+http://localhost:3000/DropStudents
+טבלת Classes: 
+http://localhost:3000/CreateClasses
+http://localhost:3000/InsertDataClasses
+http://localhost:3000/ShowClasses
+http://localhost:3000/DropClasses
+טבלת Building:
+http://localhost:3000/CreateBuilding
+http://localhost:3000/InsertDataBuilding
+http://localhost:3000/ShowBuilding
+http://localhost:3000/DropBuilding
+מחיקת כל הטבלאות:
+http://localhost:3000/DropTables
+
+
+const CreateStudents = (req,res)=>{
+    var Q1 = "CREATE TABLE Students (email VARCHAR(255), password VARCHAR(255), firstname VARCHAR(255), lastname VARCHAR(255), PRIMARY KEY (email))";
+    SQL.query(Q1,(err,mySQLres)=>{
+        if (err) {
+            console.log("error ", err);
+            res.status(400).send({message: "error in creating table Students"});
+            return;
+        }
+        console.log('created table Students');
+        res.send("Students table created");
+        return;
+    })
+};
+const CreateClasses = (req,res)=>{
+    var Q1 = "CREATE TABLE Classes (building VARCHAR(255), class VARCHAR(255), date DATE, start TIME(0), end TIME(0), PRIMARY KEY (building, class, date, start, end))";
+    SQL.query(Q1,(err,mySQLres)=>{
+        if (err) {
+            console.log("error ", err);
+            res.status(400).send({message: "error in creating table Classes"});
+            return;
+        }
+        console.log('created table Classes');
+        res.send("Classes table created");
+        return;
+    })
+};
+const CreateBuilding = (req,res)=>{
+        var Q1 = "CREATE TABLE Building (building VARCHAR(255), location VARCHAR(225), closes VARCHAR(255), PRIMARY KEY (building)";
+        SQL.query(Q1,(err,mySQLres)=>{
+            if (err) {
+                console.log("error ", err);
+                res.status(400).send({message: "error in creating table Classes"});
+                return;
+            }
+            console.log('created table Building');
+            res.send("Building table created");
+            return;
+        })
+    };
+

@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        link(rel="stylesheet", href="css/Style.css" ,defer )
+        script( src='js/clientside.js',defer)
+        title Results Page
+    body#resPage
+        header
+            img(src='graphics/line.png', width="150", height="8")
+            div.logo2
+                img#pic2(src='graphics/backround.png', width="20", height="20")
+                h4 FIND ME A CLASS
+            div.line22
+                img#line22( src='graphics/line.png', width="150", height="8")
+        nav
+            ul
+                li
+                    a(href = "http://localhost:3000/WelcomePage") חזור למסך בית
+                li
+                    a(href = "http://localhost:3000/SearchPage") חזור לחיפוש כיתה
+        content 
+            h5 כיתות פנויות
+            table#classes
+                tr 
+                    th שריון
+                    th ניווט
+                    th מספר כיתה
+                    th מספר בניין
+                    
+                each n in v2
+                    tr 
+                        td
+                            button(onclick=`choosemsg("${n.building}", "${n.class}", "${n.date}", "${n.start}", "${n.end}")` class="tbl") שריין
+                            
+                        td 
+                            a(href=`${n.location}` class="tbl") נווט
+                            
+                        td= n.class 
+                        td= n.building 
+
+        footer
+            | לתמיכה טכנית חייג: 03-6755555
+            | Find Me A Class
+            | :חפשו אותנו בפייסבוק

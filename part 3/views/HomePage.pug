@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    link(rel="stylesheet", href="css/Style.css")
+    script(src='js/clientside.js',defer)
+    title Opening Page
+  body#OpeningPage
+    header
+      img(src='graphics/line.png', width="350", height="10")
+      div.logo
+        div.insidelogo
+          img#pic(src='graphics/backround.png', width="60", height="60")
+          h1 FIND ME A CLASS
+        img#line2( src='graphics/line.png', width="350", height="10")
+    content
+      form.my_form#opening(method="post" action="/FindStudent")
+        br
+        br
+        div.msg#msgOpening
+        h6 #{v3}
+        br
+        input#emailOpen(type="email", name="emailOpen", placeholder="...הכנס את המייל האוניבריסטאי")
+        | :שם משתמש
+        br
+        br
+        input#passwordOpen(type="password", name="passwordOpen")
+        | :סיסמה
+        br
+        br
+        input.btn(type="submit", value="התחבר")
+      br
+      br
+      li 
+        a(href="http://localhost:3000/SingUpPage" class="btn" id="singup") רישום לאתר
+    sidebar
+      img(src='graphics/backround.png', width="700", height="450")
+      h2 Find your place
+      h3 to learn
+    footer
+      ul
+        li
+          a(href = "http://localhost:3000/AboutPage") אודות 
+        li 
+          | לתמיכה טכנית חייג: 03-6755555
+        li 
+          | Find Me A Class
+          | :חפשו אותנו בפייסבוק 

@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        link(rel="stylesheet", href="css/Style.css")
+        script( src='js/clientside.js',defer)
+        title Order details Page
+    body#DetailsPage
+        header
+            img(src='graphics/line.png', width="150", height="8")
+            div.logo2
+                img#pic2(src='graphics/backround.png', width="20", height="20")
+                h4 FIND ME A CLASS
+            div.line22
+                img#line22( src='graphics/line.png', width="150", height="8")
+        nav
+            ul
+                li
+                    a(href = "http://localhost:3000/WelcomePage") חזור למסך בית
+                li
+                    a(href = "http://localhost:3000/AromaOrder") חזור לתפריט
+        content
+            h5 ההזמנה שלך
+            br
+            table#classes
+                tr 
+                    th סה"כ
+                    th כמות
+                    th מחיר
+                    th מוצר
+                each n in v3
+                    if (n.count!=0)
+                        tr 
+                            td= n.sum
+                            td= n.count
+                            td= n.price 
+                            td= n.name
+                    
+                     
+            br
+            button(onclick="ordermsg()" type="reserve" class="tbl") הזמן
+        footer
+            | לתמיכה טכנית חייג: 03-6755555
+            | Find Me A Class
+            | :חפשו אותנו בפייסבוק

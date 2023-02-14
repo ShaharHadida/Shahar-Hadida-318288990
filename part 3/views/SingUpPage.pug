@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    link(rel="stylesheet", href="css/Style.css")
+    script(src='js/clientside.js',defer)
+    title Sing Up Page
+  body#SingUp
+    header
+      img(src='graphics/line.png', width="150", height="8")
+      div.logo2
+        img#pic2(src='graphics/backround.png', width="20", height="20")
+        h4 FIND ME A CLASS
+      div.line22
+        img#line22( src='graphics/line.png', width="150", height="8")
+    nav
+      ul
+        li
+          a(href = "http://localhost:3000/HomePage") חזרה לעמוד הכניסה
+        li
+          a(href = "http://localhost:3000/AboutPage") אודות    
+    content
+      form#singup(class="my_form" method="post" action="/NewStudent")
+        div.msg#msgsing
+        h7 #{v2}
+        br
+        input#firstname(type="text", name="firstname")
+        | :שם
+        br
+        br
+        input#lastname(type="text", name="lastname")
+        | :שם משפחה
+        br
+        br
+        input#emailsing(type="email", name="emailsing", placeholder="...הכנס את המייל האוניבריסטאי")
+        | :שם משתמש
+        br
+        br
+        input#passwordsing(type="password", name="passwordsing")
+        | :סיסמה
+        br
+        br
+        input#password2(type="password", name="password2")
+        | :חזור על הסיסמה
+        br
+        br
+        input.btn(type="submit", value="הירשם")
+    footer
+        | לתמיכה טכנית חייג: 03-6755555
+        | Find Me A Class
+        | :חפשו אותנו בפייסבוק 
