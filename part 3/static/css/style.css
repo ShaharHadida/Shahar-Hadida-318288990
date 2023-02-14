@@ -19,10 +19,10 @@
     #OpeningPage{
         display: grid;
         grid-template-areas:
-        'header sidebar'
-        'content sidbar'
-        'footer footer';
-        grid-template-columns:50% 50%;
+        'header '
+        'content '
+        'footer ';
+        grid-template-columns:100%;
         grid-template-rows: 10% 50% 3%;
     }
 }
